@@ -463,7 +463,9 @@
 
     <div class="card">
       <div class="field" style="margin-top:16px;">
+        <div class="section-title"><span class="num">1</span>How many people are travelling?</div>
         <span class="field-label">How many people are travelling?</span>
+        <span class="field-label">कति जना यात्रु हुनुहुन्छ</span>
         <div class="stepper">
           <button type="button" id="decBtn" aria-label="Decrease passengers">&minus;</button>
           <input type="number" id="passengers" value="1" min="1" max="6" readonly inputmode="numeric">
@@ -476,13 +478,13 @@
       <div class="section-title"><span class="num">2</span>Your details</div>
 
       <div class="field">
-        <span class="field-label">Full name</span>
+        <span class="field-label">Full name पुरा नाम</span>
         <input type="text" id="fullName" placeholder="e.g. Ramesh Thapa" autocomplete="name" required>
         <div class="err-msg">Please enter your full name.</div>
       </div>
 
       <div class="field">
-        <span class="field-label">Phone number</span>
+        <span class="field-label">Phone number फोन नम्बर</span>
         <input type="tel" id="phone" placeholder="98XXXXXXXX" autocomplete="tel" inputmode="numeric" required>
         <div class="err-msg">Enter a valid phone number.</div>
       </div>
@@ -492,13 +494,13 @@
       <div class="section-title"><span class="num">3</span>Pickup &amp; time</div>
 
       <div class="field">
-        <span class="field-label">Pickup time</span>
+        <span class="field-label">Pickup time समय</span>
         <input type="datetime-local" id="pickupTime" required>
         <div class="err-msg">Please choose a pickup time.</div>
       </div>
 
       <div class="field loc-field">
-        <span class="field-label">Pickup location</span>
+        <span class="field-label">Pickup location स्थान</span>
         <input type="text" id="pickupLoc" placeholder="e.g. Bus park, near city hospital" autocomplete="off" required>
         <div class="err-msg">Please enter or locate your pickup point.</div>
         <button type="button" class="use-loc-btn" id="useLocBtn">
@@ -512,7 +514,7 @@
     </div>
 
     <div class="card">
-      <div class="section-title"><span class="num">4</span>Destination</div>
+      <div class="section-title"><span class="num">4</span>Destination गन्तव्य </div>
       <div class="field" style="margin-bottom:0;">
         <span class="field-label">Where are you going?</span>
         <input type="text" id="destination" placeholder="e.g. District court, Pokhara" autocomplete="off" required>
