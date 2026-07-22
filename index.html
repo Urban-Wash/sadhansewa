@@ -550,7 +550,7 @@
 (function(){
   "use strict";
 
-  const WHATSAPP_NUMBER = "9779814568971";
+  const WHATSAPP_NUMBER = "+9779701740552";
 
   const form = document.getElementById('bookingForm');
   const fullName = document.getElementById('fullName');
@@ -589,21 +589,21 @@
     toastTimer = setTimeout(()=> toast.classList.remove('show'), 3400);
   }
 
-  function updateProgress(){
-    const step1 = true; // mode always set (default Bike)
-    const step2 = fullName.value.trim() && validatePhone(phone.value);
-    const step3 = pickupTime.value && pickupLoc.value.trim();
-    const step4 = destination.value.trim();
-    const states = [step1, step2, step3, step4];
-    dots.forEach((d,i)=> d.classList.toggle('done', !!states[i]));
-  }
+  // function updateProgress(){
+  //   const step1 = true; // mode always set (default Bike)
+  //   const step2 = fullName.value.trim() && validatePhone(phone.value);
+  //   const step3 = pickupTime.value && pickupLoc.value.trim();
+  //   const step4 = destination.value.trim();
+  //   const states = [step1, step2, step3, step4];
+  //   dots.forEach((d,i)=> d.classList.toggle('done', !!states[i]));
+  // }
 
-  document.querySelectorAll('input[name="mode"]').forEach(r=>{
-    r.addEventListener('change', ()=>{
-      sumMode.textContent = document.querySelector('input[name="mode"]:checked').value;
-      updateProgress();
-    });
-  });
+  // document.querySelectorAll('input[name="mode"]').forEach(r=>{
+  //   r.addEventListener('change', ()=>{
+  //     sumMode.textContent = document.querySelector('input[name="mode"]:checked').value;
+  //     updateProgress();
+  //   });
+  // });
 
   function clampPax(v){ return Math.min(6, Math.max(1, v)); }
   decBtn.addEventListener('click', ()=>{
@@ -750,7 +750,6 @@
   }
 
   function buildMessage(){
-    const mode = document.querySelector('input[name="mode"]:checked').value;
     const pax = passengers.value;
     const name = fullName.value.trim();
     const ph = phone.value.trim();
@@ -767,7 +766,6 @@
     const lines = [
       `🚖 *New Sadhan Sewa Booking*`,
       ``,
-      `*Ride type:* ${mode}`,
       `*Passengers:* ${pax}`,
       `*Name:* ${name}`,
       `*Contact:* ${ph}`,
